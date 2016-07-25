@@ -1,3 +1,3 @@
-#University of Stirling MSc Dissertation Template.
+#University of Stirling MSc Dissertation LaTex Template.
 
 Author: Emmanuel Osimosu
