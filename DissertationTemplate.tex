@@ -1,7 +1,8 @@
 \documentclass[11pt]{report}
-\usepackage{amsmath,amssymb,geometry,graphicx,hyperref}
+\usepackage{amsmath,amssymb,geometry,graphicx,xcolor}
 \usepackage{listings} % for source code
-\lstset{showstringspaces=false}
+\lstset{basicstyle=\small\ttfamily,showstringspaces=false,keywordstyle=\bfseries\color{blue!70!black}}
+\usepackage[colorlinks=true,allcolors=red,urlcolor=blue]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % with 11 point font, 1.5 line spacing, single-sided pages
 \setlength{\parskip}{0.5\baselineskip}
@@ -207,12 +208,12 @@ To include programming source code in your document, use the \texttt{lstlisting}
     \textbackslash{}end\{lstlisting\}
 \end{quote}
 produces the following in the pdf: \\
-\begin{lstlisting}[language=Python, frame=single, basicstyle=\ttfamily]
+\begin{lstlisting}[language=Python, frame=single, label={lst:label}, caption={Some Python code}]
 def factorial(n):
 	if n == 0: return 1
 	else: return n * factorial(n-1)
 \end{lstlisting}
-You can change \texttt{language=Python} to \texttt{language=Java}, etc., for different programming languages. The \texttt{frame=single} can be removed if you do not want the border around your code snippet. See \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings} for syntax coloring and other options.
+You can change \texttt{language=Python} to \texttt{language=Java}, etc., for different programming languages. The \texttt{frame=single} can be removed if you do not want the border around your code snippet. See \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings} for syntax coloring and other option. You can reference the listing with the command, \texttt{\textbackslash{}ref\{lst:label\}}, as in see listing \ref{lst:label}.
 
 
 \chapter{Conclusion}
